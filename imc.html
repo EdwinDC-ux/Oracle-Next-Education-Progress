@@ -34,20 +34,30 @@
     calcularIMC(60, 1.70, 'Gabriela', 55, 1.60, 'Luisa');
     */
 
+    /*
     function promediar2Numeros(numero1, numero2) {
         return (numero1 + numero2) / 2;
     }
+    */
 
     function calcularIMC (peso, altura) {
         return peso / (altura*altura);
     }
 
-    var imcChristiam = calcularIMC(71, 1.72)
-    var imcFelipe = calcularIMC(75, 1.73)
+    /*
+    imprimir('El promedio del IMC de Christian y Felipe es: ' + promediar2Numeros(calcularIMC(71, 1.72), calcularIMC(75, 1.73)));
 
-    imprimir('El IMC de Christian es: ' + imcChristiam);
-    imprimir('El IMC de Felipe es: ' + imcFelipe);
+    imprimir('El promedio del IMC de Gabriela y Luisa es: ' + promediar2Numeros(calcularIMC(60, 1.70), calcularIMC(55, 1.60)));
+    */
 
-    imprimir('El promedio del IMC de Christian y Felipe es: ' + promediar2Numeros(imcChristiam, imcFelipe))
+    var nombre;
+    var pesoInformado;
+    var alturaInformada;
+
+    nombre = prompt('Informe su nombre:')
+    pesoInformado = prompt(nombre + ' informe su peso:');
+    alturaInformada = prompt(nombre + 'Informe su altura:');
+
+    imprimir(nombre + ' su IMC calculado es: ' + calcularIMC(pesoInformado, alturaInformada))
 
 </script>
