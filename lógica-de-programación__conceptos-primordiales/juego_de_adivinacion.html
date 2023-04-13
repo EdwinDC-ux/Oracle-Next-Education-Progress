@@ -28,7 +28,7 @@
         numeroLanzado = parseInt(prompt('Ingrese un número entre 0 - 10'))
 
         if (numeroPensado == numeroLanzado) {
-            alert('Usted acertó en el intento '+ (contador + 1) +', ha ganado');
+            alert('Usted acertó, ha ganado');
             break;
         } else if (numeroPensado > numeroLanzado) {
             alert('Usted erró');
@@ -39,7 +39,8 @@
     } while(contador < intentos);
 
     if (contador == intentos && numeroPensado != numeroLanzado) {
-        alert('Se acabó el juego, no hay mas intentos');
+        alert('Se acabó el juego, no hay más intentos');
+        imprimir('El número pensado era ' + numeroPensado);
     }
 
 </script>
