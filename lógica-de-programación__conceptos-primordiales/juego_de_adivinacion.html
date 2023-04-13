@@ -28,12 +28,12 @@
         numeroLanzado = parseInt(prompt('Ingrese un número entre 0 - 10'))
 
         if (numeroPensado == numeroLanzado) {
-            alert('Usted acertó, ha ganado');
+            alert('Usted acertó en el intento '+ (contador + 1) +', ha ganado');
             break;
         } else if (numeroPensado > numeroLanzado) {
-            alert('Usted erró, el número pensado era mayor que tu número');
+            alert('Usted erró');
         } else {
-            alert('Usted erró, el número pensado era menor que tu número');
+            alert('Usted erró');
         }
         contador ++;
     } while(contador < intentos);
