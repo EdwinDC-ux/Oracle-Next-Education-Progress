@@ -20,14 +20,26 @@
     }
 
     var numeroPensado = sorteo(10);
-    var numeroLanzado = parseInt(prompt('Ingrese un número entre 0 - 10'));
+    var numeroLanzado;
+    var intentos = 3;
+    var contador = 0;
 
-    if (numeroPensado == numeroLanzado) {
-        imprimir('Usted acertó');
-    } else if (numeroPensado > numeroLanzado) {
-        imprimir('Usted erró, el número pensado era mayor que tu número');
-    } else {
-        imprimir('Usted erró, el número pensado era menor que tu número');
+    do {
+        numeroLanzado = parseInt(prompt('Ingrese un número entre 0 - 10'))
+
+        if (numeroPensado == numeroLanzado) {
+            alert('Usted acertó, ha ganado');
+            break;
+        } else if (numeroPensado > numeroLanzado) {
+            alert('Usted erró, el número pensado era mayor que tu número');
+        } else {
+            alert('Usted erró, el número pensado era menor que tu número');
+        }
+        contador ++;
+    } while(contador < intentos);
+
+    if (contador == intentos && numeroPensado != numeroLanzado) {
+        alert('Se acabó el juego, no hay mas intentos');
     }
 
 </script>
