@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA -- JUEGO DE ADIVINACIÓN</h1>
+
+<script>
+
+    function saltarLinea() {
+        document.write('<br>');
+        document.write('<br>');
+        document.write('<br>');
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var lineas = parseInt(prompt('¿Cuántas lineas desea mostrar?'));
+    var estrellas = parseInt(prompt('¿Cuántos asteriscos quiere en cada línea?'))
+    var asteriscos = '';
+
+    for (let index = 0; index < lineas; index++) {
+        asteriscos = '';
+        for (let jIndex = 0; jIndex < estrellas; jIndex++) {
+            asteriscos += '*';
+        }
+        imprimir(asteriscos);
+    }
+
+    imprimir('FIN');
+
+</script>
