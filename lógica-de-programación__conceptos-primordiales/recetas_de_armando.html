@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<input>
+<button>RECETAS DE ARMANDO</button>
+
+<script>
+    var ingredientes = [];
+    var cantidad = parseInt(prompt("¿Cuántos ingredientes vas a añadir?"));
+    var contador = 1;
+
+    while( contador <= cantidad) {
+        var ingrediente = prompt("Informe el ingrediente " + contador);
+        var existente = false;
+
+        for (let posicion = 0; posicion < ingredientes.length; posicion++) {
+            if (ingrediente == ingredientes[posicion]) {
+                existente = true;
+                break;
+            }
+            
+        }
+        if (!existente) {
+            ingredientes.push(ingrediente);
+            contador ++;
+        } else {
+            alert('Este ingrediente ya existe');
+        }
+    }
+
+    console.log(ingredientes);
+</script>

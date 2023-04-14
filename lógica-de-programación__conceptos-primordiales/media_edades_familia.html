@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA -- CALCULAR LA MEDIA DE LAS EDADES DE UNA FAMILIA</h1>
+
+<script>
+
+    function saltarLinea() {
+        document.write('<br>');
+        document.write('<br>');
+        document.write('<br>');
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var numeroIntegrantes = parseInt(prompt('¿Cuantos integrantes tiene la familia?'));
+    var totalEdades = 0;
+
+    for (let index = 0; index < numeroIntegrantes; index++) {
+        var totalEdades = totalEdades + parseInt(prompt('Igrese la edad del familiar ' + (index + 1)));
+        
+    }
+
+    imprimir('El promedio de las dedades ingresadas es: ' + totalEdades/numeroIntegrantes);
+
+</script>
