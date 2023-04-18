@@ -11,7 +11,20 @@
         pincel.strokeRect(xPos, yPos, lado, lado);
     }
 
-    dibujarCuadradoBorde(0, 0, 50, 'red', 'black');
-    dibujarCuadradoBorde(0, 50, 50, 'yellow', 'black');
-    dibujarCuadradoBorde(0, 100, 50, 'green', 'black');
+    /*
+    var count = 0;
+    while(count < 600) {
+        dibujarCuadradoBorde(count, 0, 50, 'red', 'black');
+        dibujarCuadradoBorde(count, 50, 50, 'yellow', 'black');
+        dibujarCuadradoBorde(count, 100, 50, 'green', 'black');
+
+        count += 50;
+    }
+    */
+
+    for (let count = 0; count < 600; count += 50) {
+        dibujarCuadradoBorde(count, 0, 50, 'red', 'black');
+        dibujarCuadradoBorde(count, 50, 50, 'yellow', 'black');
+        dibujarCuadradoBorde(count, 100, 50, 'green', 'black');
+    }
 </script>
