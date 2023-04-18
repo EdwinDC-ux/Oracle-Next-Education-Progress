@@ -1,18 +1,17 @@
 <canvas width="600" height="400"></canvas>
 
 <script>
-    function dibujarCuadradoBorde() {
+    function dibujarCuadradoBorde(xPos, yPos, lado, color, border) {
         var pantalla=document.querySelector('canvas');
         var pincel=pantalla.getContext('2d');
 
-        pincel.fillStyle = 'green';
-        pincel.fillRect(0, 0, 50, 50);
-        pincel.strokeStyle = 'black';
-        pincel.strokeRect(0, 0, 50, 50);
+        pincel.fillStyle = color;
+        pincel.fillRect(xPos, yPos, lado, lado);
+        pincel.strokeStyle = border;
+        pincel.strokeRect(xPos, yPos, lado, lado);
     }
 
-    dibujarCuadradoBorde()
-    dibujarCuadradoBorde()
-    dibujarCuadradoBorde()
-    dibujarCuadradoBorde()
+    dibujarCuadradoBorde(0, 0, 50, 'red', 'black');
+    dibujarCuadradoBorde(0, 50, 50, 'yellow', 'black');
+    dibujarCuadradoBorde(0, 100, 50, 'green', 'black');
 </script>
