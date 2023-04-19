@@ -4,6 +4,7 @@
     var pantalla=document.querySelector('canvas');
     var pincel=pantalla.getContext('2d');
     var index = 0;
+    var flagDirection = true;
     
     pincel.fillStyle= 'lightgrey';
     pincel.fillRect(0, 0, 600, 400);
@@ -22,8 +23,17 @@
     function actualizarPantalla() {
         limpiarPantalla();
         diseniarCircunferencia(index,20,10);
-        index++;
+        if (index == 590) {
+            flagDirection = false;
+        } else if(index == 10) {
+            flagDirection = true;
+        }
+        if (flagDirection) {
+            index++;
+        } else {
+            index--;
+        }
     }
 
-    setInterval(actualizarPantalla, 100);
+    setInterval(actualizarPantalla, 10);
 </script>
