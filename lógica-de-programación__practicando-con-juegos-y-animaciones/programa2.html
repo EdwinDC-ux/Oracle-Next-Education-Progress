@@ -1,0 +1,30 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    function dibujarCuadradoBorde(xPos, yPos, lado, color, border) {
+        var pantalla=document.querySelector('canvas');
+        var pincel=pantalla.getContext('2d');
+
+        pincel.fillStyle = color;
+        pincel.fillRect(xPos, yPos, lado, lado);
+        pincel.strokeStyle = border;
+        pincel.strokeRect(xPos, yPos, lado, lado);
+    }
+
+    /*
+    var count = 0;
+    while(count < 600) {
+        dibujarCuadradoBorde(count, 0, 50, 'red', 'black');
+        dibujarCuadradoBorde(count, 50, 50, 'yellow', 'black');
+        dibujarCuadradoBorde(count, 100, 50, 'green', 'black');
+
+        count += 50;
+    }
+    */
+
+    for (let count = 0; count < 600; count += 50) {
+        dibujarCuadradoBorde(count, 0, 50, 'red', 'black');
+        dibujarCuadradoBorde(count, 50, 50, 'yellow', 'black');
+        dibujarCuadradoBorde(count, 100, 50, 'green', 'black');
+    }
+</script>
